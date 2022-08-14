@@ -1,0 +1,16 @@
+:root {
+    --primary: #e14623;
+    --light: #ffffff;
+    --grey: #efefef;
+    --black: #000000;
+}
+
+body{
+    font-family: 'Open Sans', 'sans-serif';
+    overflow: scroll;
+    color: var(--primary);
+    background-color: #ebebea;
+}
+
+.bg-primary { background-color: var(--primary) !important; }
+.bg-light { background-color: var(--light) !important; }

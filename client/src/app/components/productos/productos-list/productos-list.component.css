@@ -1,0 +1,123 @@
+/*TITULO DE PÁGINA*/
+.main--container {
+    display: flex;
+    position: relative;
+    min-height: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    color: #999;
+    background-color: #ebebea;
+    font-family: "Open Sans",sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+.page--header {
+    padding: 18px 15px;
+    background-color: #fff;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.page--title {
+    color: #6c2334;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.breadcrumb {
+    margin-top: 4px;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    font-weight: 600;
+}
+
+.breadcrumb, .tag {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.breadcrumb>.breadcrumb-item.active, .tag-hardware:before {
+    color: #6c2334;
+}
+
+/*TABLA DE PRODUCTOS*/
+
+.table {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 40px 0 rgb(0 0 0 / 15%);
+    -moz-box-shadow: 0 0 40px 0 rgba(0,0,0,.15);
+    -webkit-box-shadow: 0 0 40px 0 rgb(0 0 0 / 15%);
+    -o-box-shadow: 0 0 40px 0 rgba(0,0,0,.15);
+    -ms-box-shadow: 0 0 40px 0 rgba(0,0,0,.15);
+    text-align: center;
+    background-color: #fff;
+}
+
+.table-color{
+    background-color: #1c2324;
+}
+
+.main--content {
+    -ms-flex: 1;
+    -webkit-box-flex: 1;
+    flex: 1;
+    padding: 30px 30px 0;
+}
+
+td{
+    text-transform: uppercase;
+    padding: 0.5rem 0.5rem;
+}
+
+thead td{
+    color: #fff;
+}
+
+tfoot td{
+    color: #fff;
+}
+
+#buscadorProducto{
+    width: 100%;
+    border-radius: 5px;
+    border-width: 1px;
+    min-height: 2rem;
+}
+
+a i{
+    color: #6c2334;
+    font-size: 18px;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+    @media (min-width: 992px){
+    .col-lg-6 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    }
+
+
+    

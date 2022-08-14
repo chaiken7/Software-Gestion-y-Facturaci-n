@@ -1,0 +1,65 @@
+<main class="main--container">
+    <section class="page--header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6"> 
+            <h2 class="page--title h5">VENTAS</h2>
+            <ul class="breadcrumb"> 
+              <li class="breadcrumb-item active"><span>Presupuestos</span></li>
+              </ul> 
+            </div>
+        </div>
+      </div>
+    </section>
+    <section class="main--content">
+        <form action="/presupuestos/dp/:id" method="POST">
+                <table class="table table-hover">
+                    <thead class="table-color">
+                        <td>PRESUPUESTO</td>
+                        <td>NOMBRE</td>
+                        <td>SKU</td>
+                        <td>CANTIDAD</td>
+                        <td>PRECIO</td>
+                        <td>ACCIONES</td>
+                    </thead>
+                    <tr>
+                        <td>
+                            <input type="text" class="form-control" name="idPresupuesto" readonly="readonly"  placeholder= "id Presu" value="{{id}}">
+                        </td>
+                        <td>
+                            <select [formControl]="test"
+                            class="form-select" aria-label="Seleccionar Producto">
+                                <option [ngValue]="producto" *ngFor = "let producto of productos">{{producto.nombre}}</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input id="idp" type="text" class="form-control" name="idProducto" placeholder="" value="{{test.value.id}}" autofocus>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" name="cantidad" [(ngModel)]="pP.cantidad" placeholder="cantidad">
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" name="precio" placeholder="precio" form value="{{test.value.precio}}">
+                        </td>
+                            <button type="button" (click)="savepP($event)" class="btn btn-success btn-block">
+                                Guardar
+                            </button>   
+                    </tr>
+
+                    <tbody *ngFor = "let pp of pps"> 
+                        <tr>
+                            <td>{{pp.idPresupuesto}}</td>
+                            <td>{{pp.nombreProducto}}</td>
+                            <td>{{pp.idProducto}}</td>
+                            <td>{{pp.cantidad}}</td> 
+                            <td>{{pp.precio}}</td>
+                            <td>
+                                <a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                                <a (click)="deleteDetalle(pp.idDetalle)"><i class="fa-solid fa-trash-can"></i></a>
+                            </td>                            
+                        </tr>    
+                    </tbody>
+                </table>
+        </form>
+    </section>
+    </main>

@@ -1,0 +1,57 @@
+<main class="main--container">
+    <section class="page--header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6"> 
+            <h2 class="page--title h5">VENTAS</h2>
+            <ul class="breadcrumb"> 
+              <li class="breadcrumb-item active"><span>Presupuestos</span></li>
+              </ul> 
+            </div>
+        </div>
+      </div>
+    </section>
+    <section class="main--content">
+        <form action="/presupuestos" method="POST">
+        <table class="table table-hover">      
+          <thead class="table-color">
+            <td>ID</td>
+            <td>NOMBRE</td>
+            <td>APELLIDO</td>
+            <td>TELÉFONO</td>
+            <td>ACCIONES</td>
+          </thead>
+          <tr> 
+            <td>
+            </td>                                 
+            <td>
+                <input type="text" class="form-control" name="nombre" [(ngModel)]="presupuesto.nombre" placeholder="Nombre" autofocus>
+            </td>
+            <td>
+                <input type="text" class="form-control" name="apellido" [(ngModel)]="presupuesto.apellido" placeholder="Apellido">
+            </td>
+            <td>
+                <input type="text" class="form-control" name="telefono" [(ngModel)]="presupuesto.telefono" placeholder="Telefono">
+            </td>
+            <td>
+                <button class="btn" (click)="guardarNewPresupuesto()">
+                    Guardar
+                </button>
+            </td>
+        </tr>
+          <tbody *ngFor = "let presupuesto of presupuestos">
+            <tr>
+                <td>{{presupuesto.id}}</td>
+                <td>{{presupuesto.nombre}}</td>
+                <td>{{presupuesto.apellido}}</td>
+                <td>{{presupuesto.telefono}}</td>
+                <td>
+                    <a [routerLink]="['/presupuestos/', presupuesto.id]"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a (click)="deletePresupuesto(presupuesto.id)"><i class="fa-solid fa-trash-can"></i></a>
+                </td>                       
+            </tr>
+            </tbody>
+        </table>
+        </form>
+    </section>
+    </main>

@@ -1,0 +1,165 @@
+<div class="wrapper">
+  <!--NAVBAR-->
+  <header class="navbar navbar-fixed">
+      <div class="navbar-header">
+          <a href="#">
+              <img id="logo" src="img/pngegg.png" alt="">
+          </a>
+          <a href="#" class="navbar--btn" data-toggle="sidebar" title="Toggle Sidebar">
+              <i class="fa fa-bars"></i>
+          </a>
+      </div>
+      <a href="#" class="navbar--btn" data-toggle="sidebar" title="Toggle Sidebar">
+          <i class="fa fa-bars"></i>
+      </a>
+      <div class="navbar--search">
+          <form action="search-results.html">
+              <input type="search" name="search" class="form-control" placeholder="Buscar..." required="">
+              <button class="btn-link"><i class="fa fa-search"></i></button>
+          </form>
+      </div>
+      <div class="navbar--nav ml-auto">
+          <ul class="nav"> <li class="nav-item"> 
+              <a href="#" class="nav-link"> 
+                  <i class="fa fa-bell"></i>
+                   <span class="badge text-white bg-primary">7</span> 
+                  </a> 
+              </li>
+              <li class="nav-item"> 
+                  <a href="mailbox_inbox.html" class="nav-link"> 
+                      <i class="fa fa-envelope"></i> 
+                      <span class="badge text-white bg-primary">4</span> 
+                  </a> 
+              </li>
+          <li class="nav-item dropdown nav--user online"> 
+              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"> 
+                  <img src="assets/img/avatars/01_80x80.png" alt="" class="rounded-circle"> 
+                  <span>Henry Foster</span> <i class="fa fa-angle-down"></i> 
+              </a> 
+              <ul class="dropdown-menu"> 
+                  <li>
+                      <a class="dropdown-item" href="profile.html"><i class="far fa-user"></i>Profile</a>
+                  </li>
+                  <li>
+                      <a href="#"><i class="far fa-envelope"></i>Inbox</a>
+                  </li>
+                  <li>
+                      <a href="#"><i class="fa fa-cog"></i>Settings</a>
+                  </li>
+                  <li class="dropdown-divider"></li>
+                  <li><a href="lock-screen.html"><i class="fa fa-lock"></i>Lock Screen</a>
+                  </li><li><a href="#"><i class="fa fa-power-off"></i>Logout</a>
+                  </li>
+              </ul> 
+          </li>
+      </ul> 
+  </div>
+  </header>
+  <!--SIDEBAR-->
+  <aside class="sidebar ps ps--active--y" data-trigger="scrollbar">
+      <div class="sidebar--nav">
+          <ul>
+              <li>
+                  <ul>
+                      <li class="active"> <a href="/"> <i class="fa-solid fa-house-chimney"></i> <span>Dashboard</span></a></li>
+                      <li class="is-dropdown">
+                          <a href="" class=" dropdown-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                              <i class="fa-solid fa-box"></i>
+                              Empresa
+                          </a>
+                          <div>
+                          <ul class="collapse" id="orders-collapse">
+                              <li><a href="#">Dashboard</a></li>
+                              <li><a href="#">Seguimiento de Presupuestos</a></li>
+                              <li><a href="#">Caja</a></li>
+                              <li><a href="o#">Tareas</a></li>
+                              <li><a href="#">Calendario</a></li>
+                          </ul>
+                          </div>
+                      </li>
+                  </ul>
+          </li>
+          <li class="dropdown"> <a class=" dropdown-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#facturacion" aria-expanded="false" href="#">Facturación</a>
+              <ul class="collapse show" id="facturacion"> 
+                  <li><a href="calendar.html"> <i class="far fa-calendar-alt"></i> <span>Total Facturado</span></a></li>
+                  <li> <a href="chat.html"> <i class="far fa-comments"></i> <span>Objetivos</span> </a> </li>
+              </ul> 
+          </li>
+              <li class="dropdown"> <a class=" dropdown-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="false" href="#">Catálogo</a>
+                  <ul class="collapse show" id="components-collapse">
+                      <li class="is-dropdown"> <a class=" dropdown-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#ui-collapse" aria-expanded="false" href="#"> <i class="far fa-newspaper"></i><span>Productos</span></a>
+                          <ul class="collapse" id="ui-collapse"> 
+                              <li><a href="/productos">Ver Productos</a></li>
+                              <li><a href="/productos/add">Agregar Productos</a></li>
+                              <li><a href="#">Lista de Precios</a></li>
+                              <li><a href="#">Modificación de Precios</a></li>
+                              <li><a href="#">Configurar Precios</a></li>
+                              <li><a href="#">Alertas de Precios</a></li>
+                              <li><a href="#">Precios Unitarios</a></li>
+                              <li><a href="#">Categorías</a></li>
+                          </ul>
+                      </li>
+                      <li class="is-dropdown"> <a class=" dropdown-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#form-collapse" aria-expanded="false" href="#"> <i class="fab fa-wpforms"></i> <span>Inventario</span> </a>
+                          <ul class="collapse" id="form-collapse">
+                              <li><a href="form-elements.html">Control de Stock</a></li>
+                              <li><a href="form-wizard.html">Modificar Stock</a></li>
+                              <li><a href="dropzone.html">Alertas de Stock</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </li>
+                  <li class="dropdown"> <a class=" dropdown-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#apps-collapse" aria-expanded="false" href="#">Ventas</a>
+                      <ul class="collapse show" id="apps-collapse"> 
+                          <li><a href="/presupuestos"> <i class="far fa-calendar-alt"></i> <span>Presupuestos</span></a></li>
+                          <li> <a href="#"> <i class="far fa-comments"></i> <span>Cobranzas</span> </a> </li>
+                          <li> <a href="#"> <i class="far fa-address-book"></i> <span>Clientes</span> </a></li>
+                          <li> <a href="#"> <i class="far fa-sticky-note"></i> <span>Notas</span> </a> </li>
+                          <li> <a href="#"> <i class="fa fa-search"></i> <span>Estadisticas</span> </a> </li>
+                          <li class="is-dropdown"> <a class=" dropdown-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#mailbox-collapse" aria-expanded="false" href="#"> <i class="far fa-envelope"></i><span>Transportes</span></a>
+                              <ul class="collapse" id="mailbox-collapse">
+                                  <li><a href="#">Localidades</a></li>
+                                  <li><a href="#">Anotaciones</a></li>
+                              </ul>
+                          </li>
+                      </ul> 
+                  </li>
+                  <li class="dropdown"> <a class=" dropdown-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#extra-collapse" aria-expanded="false" href="#">Analisis</a> 
+                      <ul class="collapse show" id="extra-collapse"> 
+                          <li class="is-dropdown"> <a class=" dropdown-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#extraPages-collapse" aria-expanded="false" href="#"> <i class="fa fa-file"></i> <span>Estadisticas</span> </a> 
+                              <ul class="collapse" id="extraPages-collapse"> 
+                                  <li><a href="pricing-tables.html">Facturación</a></li>
+                                  <li><a href="profile.html">Presupuestos</a></li>
+                                  <li><a href="invoice.html">Ventas</a></li>
+                                  <li><a href="login.html">Login</a></li>
+                                  <li><a href="register.html">Register</a></li>
+                                  <li><a href="forgot-password.html">Forgot Password</a></li>
+                                  <li><a href="lock-screen.html">Lock Screen</a></li>
+                                  <li><a href="404.html">404 Error</a></li>
+                                  <li><a href="500.html">500 Error</a></li>
+                                  <li><a href="maintenance.html">Maintenance</a></li>
+                                  <li><a href="coming-soon.html">Coming Soon</a></li>
+                              </ul> 
+                          </li>
+                          <li class="is-dropdown"> <a class=" dropdown-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#extraPages-collapse" aria-expanded="false" href="#"> <i class="fa fa-file"></i> <span>Google Analytics</span> </a> 
+                              <ul class="collapse" id="extraPages-collapse"> 
+                                  <li><a href="pricing-tables.html">Pricing Tables</a></li>
+                                  <li><a href="profile.html">Profile</a></li>
+                                  <li><a href="invoice.html">Invoice</a></li>
+                                  <li><a href="login.html">Login</a></li>
+                                  <li><a href="register.html">Register</a></li>
+                                  <li><a href="forgot-password.html">Forgot Password</a></li>
+                                  <li><a href="lock-screen.html">Lock Screen</a></li>
+                                  <li><a href="404.html">404 Error</a></li>
+                                  <li><a href="500.html">500 Error</a></li>
+                                  <li><a href="maintenance.html">Maintenance</a></li>
+                                  <li><a href="coming-soon.html">Coming Soon</a></li>
+                              </ul> 
+                          </li>
+                      </ul> 
+                  </li>
+              </ul> 
+          </div>
+  </aside>
+</div>
+<main class="main-container"><router-outlet></router-outlet></main>
+

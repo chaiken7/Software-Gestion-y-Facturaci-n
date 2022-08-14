@@ -1,0 +1,54 @@
+  <main class="main--container">
+    <section class="page--header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6"> 
+            <h2 class="page--title h5">CATÁLOGO</h2>
+            <ul class="breadcrumb"> 
+              <li class="breadcrumb-item active"><span>Productos</span></li>
+              </ul> 
+            </div>
+        </div>
+      </div>
+    </section>
+    <section class="main--content">
+      <input type="text" class="forms-control" id="buscadorProducto" placeholder="Buscar.." [(ngModel)]="filterPost" name="filterPost"/>
+      <table class="table table-hover">      
+        <thead class="table-color">
+          <td>SKU</td>
+          <td>NOMBRE</td>
+          <td>CATEGORÍA</td>
+          <td>PRECIO</td>
+          <td>ACCIONES</td>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let producto of productos | filtroBusqueda: filterPost">
+            <td>{{producto.id}}</td>
+            <td>{{producto.nombre}}</td>
+            <td>{{producto.categoria}}</td>
+            <td id="col-precio">{{producto.precio}}</td>
+            <td>
+              <a [routerLink]="['/productos/edit', producto.id]"><i class="fa-solid fa-pen-to-square"></i></a>
+              <a (click)="deleteProducto(producto.id)"><i class="fa-solid fa-trash-can"></i></a>
+            </td>
+          </tr>
+      </tbody>
+      <tfoot class="table-color">
+        <td>SKU</td>
+        <td>NOMBRE</td>
+        <td>CATEGORÍA</td>
+        <td>PRECIO</td>
+        <td>ACCIONES</td>
+      </tfoot>
+    </table>
+
+  </section>
+  </main>
+  <button (click)="createPdf()">Descargar PDF</button>
+
+
+  
+
+
+
+  
