@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc -W",
-    "dev": "nodemon build/index.js",
-    "test": "jest --forceExit"
+    "start": "nodemon build/index.js",
+    "test": "jest --forceExit",
+    "postinstall": "tsc"
   },
   "keywords": [],
   "author": "",
